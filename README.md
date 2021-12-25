@@ -6,6 +6,5 @@ springboot项目基础工程
 ## 项目架构
 - SpringBoot
 - MyBatisPlus
-- 接入redis
-- 本地缓存工具类
 - log4j2
+- swagger2   文档地址 http:127.0.0.1:8080/doc.html

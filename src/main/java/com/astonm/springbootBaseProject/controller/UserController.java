@@ -1,6 +1,6 @@
 package com.astonm.springbootBaseProject.controller;
 
-import com.astonm.springbootBaseProject.pojo.User;
+import com.astonm.springbootBaseProject.dao.entity.User;
 import com.astonm.springbootBaseProject.service.impl.UserServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

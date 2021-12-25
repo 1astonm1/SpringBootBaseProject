@@ -1,8 +1,8 @@
 package com.astonm.springbootBaseProject.service.impl;
 
-import com.astonm.springbootBaseProject.dao.UserMapper;
-import com.astonm.springbootBaseProject.dao.UserMapperExt;
-import com.astonm.springbootBaseProject.pojo.User;
+import com.astonm.springbootBaseProject.dao.mapper.UserMapper;
+import com.astonm.springbootBaseProject.dao.mapper.UserMapperExt;
+import com.astonm.springbootBaseProject.dao.entity.User;
 import com.astonm.springbootBaseProject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.astonm.springbootBaseProject.pojo;
+package com.astonm.springbootBaseProject.dao.entity;
 
 import java.io.Serializable;
 import java.util.Date;

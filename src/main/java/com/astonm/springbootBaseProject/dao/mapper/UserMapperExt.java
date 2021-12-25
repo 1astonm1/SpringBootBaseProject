@@ -1,7 +1,7 @@
-package com.astonm.springbootBaseProject.dao;
+package com.astonm.springbootBaseProject.dao.mapper;
 
 
-import com.astonm.springbootBaseProject.pojo.User;
+import com.astonm.springbootBaseProject.dao.entity.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

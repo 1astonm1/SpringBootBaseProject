@@ -1,6 +1,6 @@
 package com.astonm.springbootBaseProject.service;
 
-import com.astonm.springbootBaseProject.pojo.User;
+import com.astonm.springbootBaseProject.dao.entity.User;
 
 import java.util.List;
 
