@@ -1,4 +1,4 @@
-package com.astonm.springbootBaseProject.common.constant;
+package com.astonm.springbootBaseProject.common.enums;
 
 import com.alibaba.fastjson.JSONObject;
 

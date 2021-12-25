@@ -1,8 +1,8 @@
 package com.astonm.springbootBaseProject.service.impl;
 
-import com.astonm.springbootBaseProject.common.constant.BaseEnum;
-import com.astonm.springbootBaseProject.common.constant.UserSexStatusEmus;
-import com.astonm.springbootBaseProject.common.constant.UserStatusEmus;
+import com.astonm.springbootBaseProject.common.enums.BaseEnum;
+import com.astonm.springbootBaseProject.common.enums.UserSexStatusEmus;
+import com.astonm.springbootBaseProject.common.enums.UserStatusEmus;
 import com.astonm.springbootBaseProject.common.utils.CheckUtils;
 import com.astonm.springbootBaseProject.dao.entity.SysUser;
 import com.astonm.springbootBaseProject.dao.mapper.permission.SysUserMapper;
