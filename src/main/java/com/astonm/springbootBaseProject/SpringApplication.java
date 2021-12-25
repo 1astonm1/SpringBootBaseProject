@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2021/12/24
  */
 @SpringBootApplication(scanBasePackages = "com")
-@MapperScan("com.astonm.springbootBaseProject.dao")
+@MapperScan("com.astonm.springbootBaseProject.dao.mapper")
 @Slf4j
 public class SpringApplication {
 
