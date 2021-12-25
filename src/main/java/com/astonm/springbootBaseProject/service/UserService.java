@@ -1,11 +1,12 @@
 package com.astonm.springbootBaseProject.service;
 
-import com.astonm.springbootBaseProject.dao.entity.User;
+import com.astonm.springbootBaseProject.dao.pojo.dto.permission.SysUserQueryDTO;
+import com.astonm.springbootBaseProject.dao.pojo.vo.permission.SysUserListVO;
 
 import java.util.List;
 
 public interface UserService {
 
-    public List<User> findAllUser();
+    List<SysUserListVO> list(SysUserQueryDTO dto);
 
 }

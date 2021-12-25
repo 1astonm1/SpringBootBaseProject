@@ -69,7 +69,7 @@ public class Swagger2Conf {
                 .enable(SWAGGER_IS_ENABLE)
                 .apiInfo(apiInfo)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.astonm.springbootdemo"))
+                .apis(RequestHandlerSelectors.basePackage("com.astonm.springbootBaseProject"))
 //                .paths(PathSelectors.any())
                 .paths(PathSelectors.regex("/.*"))
                 .build()
