@@ -39,6 +39,7 @@ build/
 ### logs ###
 /stacktrace.log
 /test/reports
+/log
 /logs
 *.log
 *.log.*

@@ -3,7 +3,7 @@
 
     <Properties>
         <!-- 本地开发时替换成自己的本地路径 -->
-        <Property name="local.logging.path">../../log</Property>
+        <Property name="local.logging.path">./log</Property>
         <Property name="logging.file.path">${local.logging.path}/${project.name}</Property>
         <Property name="project.name">springbootBaseProject</Property>
         <!-- sys:后面跟的变量，需要在jar启动参数中指定 -->
@@ -18,30 +18,58 @@
             <PatternLayout pattern="${layout}" charset="UTF-8" />
         </Console>
 
+        <!-- info级别日志，保留7天内 -->
         <RollingRandomAccessFile name="RollingRandomAccessFile"
                                  immediateFlush="true" fileName="${logging.file.name}"
-                                 filePattern="${logging.file.name}-%d{yyyy-MM-dd}">
+                                 filePattern="${logging.file.name}-log-%d{yyyy-MM-dd}.gz">
             <PatternLayout pattern="${layout}" charset="UTF-8" />
             <ThresholdFilter level="debug" />
-            <TimeBasedTriggeringPolicy />
+            <Policies>
+                <OnstartupTriggeringPolicy/>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${logging.file.path}" maxDepth="2">
+                    <IfFileName glob="*-log-*.gz"/>
+                    <IfLastModified age="7d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
         </RollingRandomAccessFile>
 
+        <!-- warn级别日志，保留3天内 -->
         <RollingRandomAccessFile name="RollingRandomAccessFileWarn"
                                  immediateFlush="true" fileName="${logging.file.warn.name}"
-                                 filePattern="${logging.file.warn.name}-%d{yyyy-MM-dd}">
-
+                                 filePattern="${logging.file.warn.name}-warn-%d{yyyy-MM-dd}.gz">
             <PatternLayout pattern="${layout}" charset="UTF-8" />
             <ThresholdFilter level="warn" />
-            <TimeBasedTriggeringPolicy />
+            <Policies>
+                <OnstartupTriggeringPolicy/>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5">
+                <Delete basePath="${logging.file.path}" maxDepth="2">
+                    <IfFileName glob="*-warn-*.gz"/>
+                    <IfLastModified age="3d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
         </RollingRandomAccessFile>
 
+        <!-- error级别日志，保留3天内 -->
         <RollingRandomAccessFile name="RollingRandomAccessFileError"
                                  immediateFlush="true" fileName="${logging.file.error.name}"
-                                 filePattern="${logging.file.error.name}-%d{yyyy-MM-dd}">
-
+                                 filePattern="${logging.file.error.name}-error-%d{yyyy-MM-dd}.gz">
             <PatternLayout pattern="${layout}" charset="UTF-8" />
             <ThresholdFilter level="error" />
-            <TimeBasedTriggeringPolicy />
+            <Policies>
+                <OnstartupTriggeringPolicy/>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5">
+                <Delete basePath="${logging.file.path}" maxDepth="2">
+                    <IfFileName glob="*-error-*.gz"/>
+                    <IfLastModified age="3d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
         </RollingRandomAccessFile>
     </Appenders>
 
